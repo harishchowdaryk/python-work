@@ -1,0 +1,256 @@
+left shift - x*2^n
+right shift - x/2^n
+
+
+---------------- datatypes in python------------------
+ 
+    .text (string)
+    .numeric (integer,float,complex)
+    .boolean-bool (trueo  or false)
+    .mapping  (dictionary)
+    .sequence (list,tuple)
+    .set-set,frozen set
+
+
+->printing operation
+
+for printing valies of variable mention variable name without single or double quotes
+if you observe when i used "," as separator by default space was given bwt the statement
+
+example:
+        >>>print("hello","my"," world")
+
+                  hello my world
+
+if you want to avoid space , we use sep argument for primnting function and change the default serarator
+
+exampleL:
+        >>> print("hello","my",'world",sep="")
+                hellomyworld
+       >>>print("hello","my",'world",sep="@")
+                hello@my@world
+
+
+-> input function
+   
+    so by default input() takes string as input
+     
+    example:
+            a=input() 
+            a is string type
+            to change we need to menction datatype in front of input
+            a=int(input()) now a is integer type
+
+
+
+--------------------------condition statement--------------------------------------
+   
+  *if statement
+   syntax-
+           if(condition):
+                 or
+            if condition:
+               #statement inside if block
+       #statement outside if block
+
+ *if else statement
+ syntax-
+         if(condition):
+           #statement inside if block
+       #statement outside if block
+       else:
+          #statement inside if block
+       #statement outside if block
+
+*elif statement
+  syntax-
+        if(condition1):
+            #statement
+        elif(condition2):
+            #statement
+        elif(condition3):
+            #statement
+         else:
+            #statement
+
+
+*nested if statement
+  syntax-
+        if condition1:
+           #statement
+          if condition2:
+             #statement
+            if condition3:
+               #statement
+            else:
+                #statement
+          else:
+              #statement
+        else:
+            #statement
+
+-> match (switch case)
+    syntax-
+           match a:
+                case 1:
+                     #statement
+    for default case we use underscore "_" 
+
+->loop statement
+   while syntax- while condition:
+                    #stsetment
+
+    for variable in iterable_object
+     
+    ->range() is a class or datatype
+    syntax-  range(start,stop,step)
+    example- range(1,5,1)
+             1 2 3 4 
+
+    -> indexing 
+       
+a="abcd"
+for i in range(4):
+print(i,s[i])
+*0/p=> 0 a
+       1 b
+       2 c
+       3 d
+    
+s="abcd efg"
+    i=0
+    while i<len(s) and s[i]!=" ":
+    print(s[i])
+    i+=1                
+              
+s="hjrg yu dfh "
+for i in range(len(s)):
+    if s[i]==' ':
+        break
+    print(s[i])
+op=> h
+     j
+     r
+     g
+
+
+--------------------functions----------------------------
+
+function defining ->  def function_name():         //user define function 
+                          #statement
+
+ function call->  function_name()
+
+
+*note==>  functions and methods both are different in python
+
+methods should be writen inside the class
+methods should have object to call
+
+
+
+------------type of argument--------------
+
+1.required argument            ex: def fun(a,b):   fun()
+2.defaut argument              ex: def fun(a,b=0):  fun(2)       *//if we given values in function call it will take values from function call
+3.keyword argument             ex: def fun(a,b):   fun(b=2,a=4)  
+4.variable number of argument  ex: def fun(a,*b):   fun(1,5,8,9,6)  //b will store (5,8,9,6) this type of storing is called tuple
+
+list- 
+      a=[1,2,34,56,9]
+      b=a
+      b[0]=77
+      print(a)
+      
+output=[77,2,34,56,9]
+
+-----------------------creating a module in python--------------------
+
+module is a collection of functions
+package is created by using init.py
+
+
+-----------------------string----------------------
+string is a inumerable colletion of characters
+string cannot be changed or deleted or inserted but it can change complete string
+syntax-
+        str_name[start:end:step]
+
+functions in string
+
+------------example: str_fun.py-----------------------
+
+
+s="harish chowdary k"
+print(s.upper())  //convert string into upper case if string is in lower
+print(s.lower())  //convert string into lower case  if string is in upper case
+print(s.swapcase())   //convert string into opposite case
+print(s.title())      //convert  first string into  upper case
+print(s.capitalize())  //convert string into upper  case
+print(s.isupper())
+print(s.islower())
+print(s.isalnum())
+print(s.isalpha())
+print(s.isspace())
+print(s.istitle())
+print(s.rindex('c'))
+print(s.find('h'))
+print(s.rfind('h'))
+print(s.count('h'))
+print(s.count('h'))
+print(s.startswith('k ',6))
+print(s.startswith('h'))
+print(s.endswith('k'))
+print(s.split())
+print(s.split('w'))
+print(s.partition('w'))
+
+
+inputs for lists - 
+                   1.  L=input().split()        list of string elements from user
+                   2.  L=input().split()
+                       for i in range(len(l)):     list of integers from user
+                            l[i]=int(l[i])
+                       print(l,type(l))
+                   3.  list comprehension  
+                          syntax - var_name=[op_exp ip_seq condition]  condition is not compulsory
+                         l=[2,3,4,5,6]
+                         l=[i**2 for i in l]
+                         print(l)
+                       l=[i**2 for i in range(1,11) if i%2==0] square of even nos
+                        
+                       l=[int(i) for i in input().split()]     second way of accepting integer
+            
+map class - def func(a):
+                  return a**2
+             l=[2,3,4,5,6]
+             print(list(map(fun,l)))
+
+lambda function - print(list(map(lambda a:a**2,1)))
+
+
+   l=input().split()
+   list(map(int,l))
+
+tuple is inmutable form of list
+
+to convert ASCII---> ord('char')
+to convert  char---->char(ASCII)
+
+a=[] to create empty list
+a={} to create empty dictionary 
+a=() to create empty set
+
+dictionary  d={1:23,'a':true}
+            d[a]
+             output true
+  
+  methode------ ex: dictionary.py    
+
+  for loop for dictionary     
+
+  for i in d:
+      print(i,d[i],end=" ")
+
+
+
